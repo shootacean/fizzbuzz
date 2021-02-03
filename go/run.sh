@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker run -it --rm \
-    --name fizzbuzz-php \
+    --name fizzbuzz-go \
     -v "$PWD":/usr/src/myapp \
     -w /usr/src/myapp \
-    php:7.4-cli-alpine php main.php
+    golang:1.15-alpine go run main.go
